@@ -8,5 +8,6 @@ RUN cd $MAVEN_HOME \
 
 
 FROM norstella/oxalis:latest
-
 COPY --from=mvn /dist /oxalis/ext
+COPY /cert.p12 /oxalis/conf/cert.p12
+COPY /oxalis.conf /oxalis/conf/oxalis.conf
